@@ -122,21 +122,21 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-260108_1705_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project.out 
+260109_1100_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project.out 
 
 EXE_OUTPUTS__QUOTED += \
-"260108_1705_Driverlib Empty CPU1 Example CCS Project.out" 
+"260109_1100_Driverlib Empty CPU1 Example CCS Project.out" 
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "260108_1705_Driverlib Empty CPU1 Example CCS Project.out"
+	@$(MAKE) --no-print-directory -Onone "260109_1100_Driverlib Empty CPU1 Example CCS Project.out"
 
 # Tool invocations
-260108_1705_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+260109_1100_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu64 --idiv_support=idiv0 --tmu_support=tmu0 --vcu_support=vcrc -Ooff --define=RAM --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"260108_1705_Driverlib Empty CPU1 Example CCS Project.map" --heap_size=0x200 --stack_size=0x3F8 --warn_sections -i"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"C:/ti/C2000Ware_6_00_01_00" -i"C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg" -i"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --define=RAM --diag_wrap=off --display_error_number --xml_link_info="260108_1705_Driverlib Empty CPU1 Example CCS Project_linkInfo.xml" --entry_point=code_start --rom_model -o "260108_1705_Driverlib Empty CPU1 Example CCS Project.out" $(ORDERED_OBJS)
+	"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu64 --idiv_support=idiv0 --tmu_support=tmu0 --vcu_support=vcrc -Ooff --define=RAM --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"260109_1100_Driverlib Empty CPU1 Example CCS Project.map" --heap_size=0x200 --stack_size=0x3F8 --warn_sections -i"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"C:/ti/C2000Ware_6_00_01_00" -i"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg" -i"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --define=RAM --diag_wrap=off --display_error_number --xml_link_info="260109_1100_Driverlib Empty CPU1 Example CCS Project_linkInfo.xml" --entry_point=code_start --rom_model -o "260109_1100_Driverlib Empty CPU1 Example CCS Project.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -153,9 +153,9 @@ clean:
 
 post-build:
 	-echo "========= Build of the CLB simulation has moved to the CLB Tool. Click the '?' icon by the _Generate CLB Simulation File_ enable for more details (located in the Global Parameters of the Tile Design SysConfig module) ============="
-	-if 0 == 1  C:/ti/ccs2031/ccs/tools/node/node.exe "C:/ti/C2000Ware_6_00_01_00/utilities/clb_tool/clb_syscfg/dot_file_libraries/clbDotUtility.js"  "C:/ti/C2000Ware_6_00_01_00/utilities/clb_tool/clb_syscfg/" "C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg" "C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg/clb.dot"
-	-if 0 == 1  mkdir "C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/diagrams"
-	-if 0 == 1  C:/ti/ccs2031/ccs/tools/node/node.exe "C:/ti/C2000Ware_6_00_01_00/driverlib/.meta/generate_diagrams.js" "C:/ti/C2000Ware_6_00_01_00" "C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/diagrams" "C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg"
+	-if 0 == 1  C:/ti/ccs2031/ccs/tools/node/node.exe "C:/ti/C2000Ware_6_00_01_00/utilities/clb_tool/clb_syscfg/dot_file_libraries/clbDotUtility.js"  "C:/ti/C2000Ware_6_00_01_00/utilities/clb_tool/clb_syscfg/" "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg" "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg/clb.dot"
+	-if 0 == 1  mkdir "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/diagrams"
+	-if 0 == 1  C:/ti/ccs2031/ccs/tools/node/node.exe "C:/ti/C2000Ware_6_00_01_00/driverlib/.meta/generate_diagrams.js" "C:/ti/C2000Ware_6_00_01_00" "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/diagrams" "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg"
 	-@echo ' '
 
 .PHONY: all clean dependents

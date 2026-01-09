@@ -1,0 +1,53 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "F2838x" --part "F2838x_337bga" --package "337bga" --context "CPU1" --product "C2000WARE@6.00.01.00"
+ * @v2CliArgs --device "TMS320F28388D" --package "337bga" --context "CPU1" --product "C2000WARE@6.00.01.00"
+ * @versions {"tool":"1.26.0+4407"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const gpio  = scripting.addModule("/driverlib/gpio.js", {}, false);
+const gpio1 = gpio.addInstance();
+const gpio2 = gpio.addInstance();
+const gpio3 = gpio.addInstance();
+const gpio4 = gpio.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+const divider3       = system.clockTree["AUX_REFDIV"];
+divider3.divideValue = 1;
+
+const divider10       = system.clockTree["EPWMCLKDIV"];
+divider10.divideValue = 1;
+
+const multiplier2         = system.clockTree["PLL_IMULT"];
+multiplier2.multiplyValue = 80;
+
+const mux1       = system.clockTree["AUXOSCCLKSRCSEL"];
+mux1.inputSelect = "INTOSC2";
+
+const mux15       = system.clockTree["OSCCLKSRCSEL"];
+mux15.inputSelect = "INTOSC2";
+
+const default_warning = scripting.addModule("/driverlib/default_warning.js", {}, false);
+scripting.suppress("Add the \'Device Support\' module in order to use Clock Tree tool and generate device support files\\. This suggestion can be ignored if not using the Clock Tree tool\\.", default_warning);
+
+gpio1.$name           = "LED1_61";
+gpio1.direction       = "GPIO_DIR_MODE_OUT";
+gpio1.gpioPin.$assign = "GPIO61";
+
+gpio2.$name           = "LED2_62";
+gpio2.direction       = "GPIO_DIR_MODE_OUT";
+gpio2.gpioPin.$assign = "GPIO62";
+
+gpio3.$name           = "LED3_145";
+gpio3.direction       = "GPIO_DIR_MODE_OUT";
+gpio3.gpioPin.$assign = "GPIO145";
+
+gpio4.$name           = "LED4_146";
+gpio4.direction       = "GPIO_DIR_MODE_OUT";
+gpio4.gpioPin.$assign = "GPIO146";

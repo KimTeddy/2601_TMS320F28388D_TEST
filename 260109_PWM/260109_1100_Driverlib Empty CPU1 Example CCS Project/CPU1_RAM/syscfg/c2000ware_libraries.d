@@ -3,7 +3,7 @@
 syscfg/c2000ware_libraries.obj: syscfg/c2000ware_libraries.c
 syscfg/c2000ware_libraries.obj: syscfg/c2000ware_libraries.h
 syscfg/c2000ware_libraries.obj: syscfg/board.h
-syscfg/c2000ware_libraries.obj: C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/driverlib.h
+syscfg/c2000ware_libraries.obj: C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/driverlib.h
 syscfg/c2000ware_libraries.obj: C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/inc/hw_memmap.h
 syscfg/c2000ware_libraries.obj: C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/adc.h
 syscfg/c2000ware_libraries.obj: C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h
@@ -105,7 +105,7 @@ syscfg/c2000ware_libraries.obj: C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driv
 syscfg/c2000ware_libraries.obj: C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/inc/hw_mcanss.h
 syscfg/c2000ware_libraries.obj: C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/inc/hw_types_mcan.h
 syscfg/c2000ware_libraries.obj: C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/driver_inclusive_terminology_mapping.h
-syscfg/c2000ware_libraries.obj: C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/device.h
+syscfg/c2000ware_libraries.obj: C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/device.h
 syscfg/c2000ware_libraries.obj: syscfg/clocktree.h
 
 syscfg/c2000ware_libraries.c:
@@ -114,7 +114,7 @@ syscfg/c2000ware_libraries.h:
 
 syscfg/board.h:
 
-C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/driverlib.h:
+C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/driverlib.h:
 
 C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/inc/hw_memmap.h:
 
@@ -318,7 +318,7 @@ C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/inc/hw_types_mcan.h:
 
 C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/driver_inclusive_terminology_mapping.h:
 
-C:/Users/Teddy/Desktop/260108/260108_1705_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/device.h:
+C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib\ Empty\ CPU1\ Example\ CCS\ Project/device/device.h:
 
 syscfg/clocktree.h:
 

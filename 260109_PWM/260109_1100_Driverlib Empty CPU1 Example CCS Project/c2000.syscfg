@@ -9,15 +9,33 @@
 /**
  * Import the modules used in this configuration.
  */
-const gpio  = scripting.addModule("/driverlib/gpio.js", {}, false);
-const gpio1 = gpio.addInstance();
-const gpio2 = gpio.addInstance();
-const gpio3 = gpio.addInstance();
-const gpio4 = gpio.addInstance();
+const led   = scripting.addModule("/driverlib/board_components/led", {}, false);
+const led1  = led.addInstance();
+const led2  = led.addInstance();
+const led3  = led.addInstance();
+const led4  = led.addInstance();
+const epwm  = scripting.addModule("/driverlib/epwm.js", {}, false);
+const epwm1 = epwm.addInstance();
 
 /**
  * Write custom configuration values to the imported modules.
  */
+led1.$name                = "myBoardLED0";
+led1.gpio.$name           = "LED1_61";
+led1.gpio.gpioPin.$assign = "GPIO61";
+
+led2.$name                = "myBoardLED1";
+led2.gpio.$name           = "LED2_62";
+led2.gpio.gpioPin.$assign = "GPIO62";
+
+led3.$name                = "myBoardLED2";
+led3.gpio.$name           = "LED3_145";
+led3.gpio.gpioPin.$assign = "GPIO145";
+
+led4.$name                = "myBoardLED3";
+led4.gpio.$name           = "LED4_146";
+led4.gpio.gpioPin.$assign = "GPIO146";
+
 const divider3       = system.clockTree["AUX_REFDIV"];
 divider3.divideValue = 1;
 
@@ -36,18 +54,19 @@ mux15.inputSelect = "INTOSC2";
 const default_warning = scripting.addModule("/driverlib/default_warning.js", {}, false);
 scripting.suppress("Add the \'Device Support\' module in order to use Clock Tree tool and generate device support files\\. This suggestion can be ignored if not using the Clock Tree tool\\.", default_warning);
 
-gpio1.$name           = "LED1_61";
-gpio1.direction       = "GPIO_DIR_MODE_OUT";
-gpio1.gpioPin.$assign = "GPIO61";
-
-gpio2.$name           = "LED2_62";
-gpio2.direction       = "GPIO_DIR_MODE_OUT";
-gpio2.gpioPin.$assign = "GPIO62";
-
-gpio3.$name           = "LED3_145";
-gpio3.direction       = "GPIO_DIR_MODE_OUT";
-gpio3.gpioPin.$assign = "GPIO145";
-
-gpio4.$name           = "LED4_146";
-gpio4.direction       = "GPIO_DIR_MODE_OUT";
-gpio4.gpioPin.$assign = "GPIO146";
+epwm1.epwmTimebase_clockDiv                                      = "EPWM_CLOCK_DIVIDER_4";
+epwm1.epwmTimebase_hsClockDiv                                    = "EPWM_HSCLOCK_DIVIDER_4";
+epwm1.epwmTimebase_period                                        = 2000;
+epwm1.epwmTimebase_counterMode                                   = "EPWM_COUNTER_MODE_UP_DOWN";
+epwm1.epwmCounterCompare_cmpA                                    = 500;
+epwm1.epwmCounterCompare_cmpB                                    = 1500;
+epwm1.epwmActionQualifier_EPWM_AQ_OUTPUT_A_ON_TIMEBASE_ZERO      = "EPWM_AQ_OUTPUT_LOW";
+epwm1.epwmActionQualifier_EPWM_AQ_OUTPUT_A_ON_TIMEBASE_UP_CMPA   = "EPWM_AQ_OUTPUT_HIGH";
+epwm1.epwmActionQualifier_EPWM_AQ_OUTPUT_A_ON_TIMEBASE_DOWN_CMPA = "EPWM_AQ_OUTPUT_LOW";
+epwm1.epwmActionQualifier_EPWM_AQ_OUTPUT_B_ON_TIMEBASE_ZERO      = "EPWM_AQ_OUTPUT_LOW";
+epwm1.epwmActionQualifier_EPWM_AQ_OUTPUT_B_ON_TIMEBASE_UP_CMPB   = "EPWM_AQ_OUTPUT_HIGH";
+epwm1.epwmActionQualifier_EPWM_AQ_OUTPUT_B_ON_TIMEBASE_DOWN_CMPB = "EPWM_AQ_OUTPUT_LOW";
+epwm1.$name                                                      = "EPWM1_U";
+epwm1.epwm.$assign                                               = "EPWM1";
+epwm1.epwm.epwm_aPin.$assign                                     = "GPIO0";
+epwm1.epwm.epwm_bPin.$assign                                     = "GPIO1";

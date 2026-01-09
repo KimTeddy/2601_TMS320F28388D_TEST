@@ -94,7 +94,7 @@ void main(void)
     GPIO_writePin(DEVICE_GPIO_PIN_LED1, 1U);
     GPIO_writePin(DEVICE_GPIO_PIN_LED2, 1U);
     GPIO_writePin(DEVICE_GPIO_PIN_LED3, 1U);
-    GPIO_writePin(DEVICE_GPIO_PIN_LED4, 1U);
+    GPIO_writePin(DEVICE_GPIO_PIN_LED4, 0U);
     //
     // Enable Global Interrupt (INTM) and real time interrupt (DBGM)
     //
@@ -103,12 +103,16 @@ void main(void)
 
     while(1)
     {
+        GPIO_togglePin(DEVICE_GPIO_PIN_LED4);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED1);
         DEVICE_DELAY_US(500000);   // 500 ms
+        GPIO_togglePin(DEVICE_GPIO_PIN_LED1);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED2);
         DEVICE_DELAY_US(500000);   // 500 ms
+        GPIO_togglePin(DEVICE_GPIO_PIN_LED2);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED3);
         DEVICE_DELAY_US(500000);   // 500 ms
+        GPIO_togglePin(DEVICE_GPIO_PIN_LED3);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED4);
         DEVICE_DELAY_US(500000);   // 500 ms
     }

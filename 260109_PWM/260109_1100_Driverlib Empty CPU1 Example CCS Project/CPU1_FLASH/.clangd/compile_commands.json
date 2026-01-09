@@ -1,0 +1,27 @@
+[
+   {
+      "directory" : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH",
+      "command"   : "clang++ -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project\" -I\"C:/ti/C2000Ware_6_00_01_00\" -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device\" -I\"C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DDEBUG -DCPU1 -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg\" -DF2838x=1 -xc",
+      "file"      : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device/device.c"
+   },
+   {
+      "directory" : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH",
+      "command"   : "clang++ -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project\" -I\"C:/ti/C2000Ware_6_00_01_00\" -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device\" -I\"C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DDEBUG -DCPU1 -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg\" -DF2838x=1",
+      "file"      : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device/f2838x_codestartbranch.asm"
+   },
+   {
+      "directory" : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH",
+      "command"   : "clang++ -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project\" -I\"C:/ti/C2000Ware_6_00_01_00\" -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device\" -I\"C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DDEBUG -DCPU1 -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg\" -DF2838x=1 -xc",
+      "file"      : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/empty_driverlib_main.c"
+   },
+   {
+      "directory" : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH",
+      "command"   : "clang++ -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project\" -I\"C:/ti/C2000Ware_6_00_01_00\" -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device\" -I\"C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DDEBUG -DCPU1 -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg\" -DF2838x=1 -xc",
+      "file"      : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg/board.c"
+   },
+   {
+      "directory" : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH",
+      "command"   : "clang++ -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project\" -I\"C:/ti/C2000Ware_6_00_01_00\" -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/device\" -I\"C:/ti/C2000Ware_6_00_01_00/driverlib/f2838x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DDEBUG -DCPU1 -I\"C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg\" -DF2838x=1 -xc",
+      "file"      : "C:/Users/Teddy/Documents/GitHub/2601_TMS320F28388D_TEST/260109_PWM/260109_1100_Driverlib Empty CPU1 Example CCS Project/CPU1_FLASH/syscfg/c2000ware_libraries.c"
+   }
+]

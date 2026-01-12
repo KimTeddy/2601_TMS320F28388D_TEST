@@ -54,26 +54,17 @@
 #include "board.h"
 #include "c2000ware_libraries.h"
 
-__interrupt void INT_myCPUTIMER0_ISR(void)
+__interrupt void INT_myCPUTIMER0_ISR(void) // CPUTIMER0 인터럽트 벡터로 들어오는 ISR(PIE 경유인 경우가 많음)
 {
     GPIO_togglePin(DEVICE_GPIO_PIN_LED1);
-
-    // Timer0가 PIE를 타는 경우(대부분) ACK가 필요
-    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
-
-    // 오버플로 플래그 클리어가 필요한 설정이면 아래도 추가
-    CPUTimer_clearOverflowFlag(CPUTIMER0_BASE);
+    CPUTimer_clearOverflowFlag(myCPUTIMER0_BASE); // Timer0 오버플로(인터럽트 원인) 플래그를 클리어해서 다음 주기 인터럽트가 정상 발생하게 함
+    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);// PIE Group1 ACK를 클리어해서 같은 그룹의 다음 인터럽트가 CPU로 다시 들어올 수 있게 함
 }
 
-__interrupt void INT_myCPUTIMER1_ISR(void)
+__interrupt void INT_myCPUTIMER1_ISR(void) // CPUTIMER1 인터럽트 벡터로 들어오는 ISR(보통 CPU INT13 쪽, PIE ACK 불필요)
 {
     GPIO_togglePin(DEVICE_GPIO_PIN_LED2);
-
-    // Timer0가 PIE를 타는 경우(대부분) ACK가 필요
-    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
-
-    // 오버플로 플래그 클리어가 필요한 설정이면 아래도 추가
-    CPUTimer_clearOverflowFlag(CPUTIMER1_BASE);
+    CPUTimer_clearOverflowFlag(myCPUTIMER1_BASE); // Timer1 오버플로(인터럽트 원인) 플래그 클리어(재진입/연속 인터럽트 방지 및 다음 주기 준비)
 }
 //
 // Main
@@ -116,12 +107,16 @@ void main(void)
     GPIO_writePin(DEVICE_GPIO_PIN_LED2, 1U);
     GPIO_writePin(DEVICE_GPIO_PIN_LED3, 1U);
     GPIO_writePin(DEVICE_GPIO_PIN_LED4, 1U);
+
+    CPUTimer_startTimer(myCPUTIMER0_BASE);
+    CPUTimer_startTimer(myCPUTIMER1_BASE);
     //
     // Enable Global Interrupt (INTM) and real time interrupt (DBGM)
     //
     EINT;
     ERTM;
-
+    // DEVICE_DELAY_US(5000000);   // 500 ms
+    // CPUTimer_stopTimer(myCPUTIMER0_BASE);
     while(1)
     {
         // GPIO_togglePin(DEVICE_GPIO_PIN_LED4);

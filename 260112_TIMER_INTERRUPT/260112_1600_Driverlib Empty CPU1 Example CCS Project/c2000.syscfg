@@ -58,7 +58,6 @@ cputimer1.$name                    = "myCPUTIMER0";
 cputimer1.timerPeriod              = 199999999;
 cputimer1.registerInterrupts       = true;
 cputimer1.enableInterrupt          = true;
-cputimer1.startTimer               = true;
 cputimer1.timerInt.enableInterrupt = true;
 
 cputimer2.$name                    = "myCPUTIMER1";
@@ -66,7 +65,6 @@ cputimer2.cputimerBase             = "CPUTIMER1_BASE";
 cputimer2.timerPeriod              = 99999999;
 cputimer2.enableInterrupt          = true;
 cputimer2.registerInterrupts       = true;
-cputimer2.startTimer               = true;
 cputimer2.timerInt.enableInterrupt = true;
 
 const default_warning = scripting.addModule("/driverlib/default_warning.js", {}, false);

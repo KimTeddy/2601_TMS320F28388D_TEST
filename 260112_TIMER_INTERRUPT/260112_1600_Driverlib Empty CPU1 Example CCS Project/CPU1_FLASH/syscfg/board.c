@@ -109,7 +109,6 @@ void myCPUTIMER0_init(){
 	CPUTimer_stopTimer(myCPUTIMER0_BASE);
 
 	CPUTimer_reloadTimerCounter(myCPUTIMER0_BASE);
-	CPUTimer_startTimer(myCPUTIMER0_BASE);
 }
 void myCPUTIMER1_init(){
 	CPUTimer_setEmulationMode(myCPUTIMER1_BASE, CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);
@@ -119,7 +118,6 @@ void myCPUTIMER1_init(){
 	CPUTimer_stopTimer(myCPUTIMER1_BASE);
 
 	CPUTimer_reloadTimerCounter(myCPUTIMER1_BASE);
-	CPUTimer_startTimer(myCPUTIMER1_BASE);
 }
 
 //*****************************************************************************

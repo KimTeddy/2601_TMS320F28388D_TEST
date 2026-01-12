@@ -160,12 +160,12 @@ a single CPU should be defined."
 //!     SDA     | GPIO104 |  GPIO40
 //!  --------------------------------
 //I2CA GPIO pins
-// #define DEVICE_GPIO_PIN_SDAA    104
-// #define DEVICE_GPIO_PIN_SCLA    105
+#define DEVICE_GPIO_PIN_SDAA    104
+#define DEVICE_GPIO_PIN_SCLA    105
 
-//I2CB GPIO pins
-// #define DEVICE_GPIO_PIN_SDAB    40
-// #define DEVICE_GPIO_PIN_SCLB    41
+// I2CB GPIO pins
+#define DEVICE_GPIO_PIN_SDAB    40
+#define DEVICE_GPIO_PIN_SCLB    41
 
 // #define DEVICE_GPIO_CFG_SDAA GPIO_104_I2CA_SDA
 // #define DEVICE_GPIO_CFG_SCLA GPIO_105_I2CA_SCL

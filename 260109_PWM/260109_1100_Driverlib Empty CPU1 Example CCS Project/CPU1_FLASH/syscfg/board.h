@@ -73,6 +73,38 @@ extern "C"
 #define GPIO_PIN_EPWM1B 1
 #define EPWM1_U_EPWMB_GPIO 1
 #define EPWM1_U_EPWMB_PIN_CONFIG GPIO_1_EPWM1B
+
+//
+// EPWM2 -> EPWM2_V Pinmux
+//
+//
+// EPWM2A - GPIO Settings
+//
+#define GPIO_PIN_EPWM2A 2
+#define EPWM2_V_EPWMA_GPIO 2
+#define EPWM2_V_EPWMA_PIN_CONFIG GPIO_2_EPWM2A
+//
+// EPWM2B - GPIO Settings
+//
+#define GPIO_PIN_EPWM2B 3
+#define EPWM2_V_EPWMB_GPIO 3
+#define EPWM2_V_EPWMB_PIN_CONFIG GPIO_3_EPWM2B
+
+//
+// EPWM3 -> EPWM3_W Pinmux
+//
+//
+// EPWM3A - GPIO Settings
+//
+#define GPIO_PIN_EPWM3A 4
+#define EPWM3_W_EPWMA_GPIO 4
+#define EPWM3_W_EPWMA_PIN_CONFIG GPIO_4_EPWM3A
+//
+// EPWM3B - GPIO Settings
+//
+#define GPIO_PIN_EPWM3B 5
+#define EPWM3_W_EPWMB_GPIO 5
+#define EPWM3_W_EPWMB_PIN_CONFIG GPIO_5_EPWM3B
 //
 // GPIO61 - GPIO Settings
 //
@@ -96,18 +128,44 @@ extern "C"
 //
 //*****************************************************************************
 #define EPWM1_U_BASE EPWM1_BASE
-#define EPWM1_U_TBPRD 2000
+#define EPWM1_U_TBPRD 625
 #define EPWM1_U_COUNTER_MODE EPWM_COUNTER_MODE_UP_DOWN
 #define EPWM1_U_TBPHS 0
-#define EPWM1_U_CMPA 500
-#define EPWM1_U_CMPB 1500
+#define EPWM1_U_CMPA 0
+#define EPWM1_U_CMPB 0
 #define EPWM1_U_CMPC 0
 #define EPWM1_U_CMPD 0
-#define EPWM1_U_DBRED 0
-#define EPWM1_U_DBFED 0
+#define EPWM1_U_DBRED 60
+#define EPWM1_U_DBFED 60
 #define EPWM1_U_TZA_ACTION EPWM_TZ_ACTION_HIGH_Z
 #define EPWM1_U_TZB_ACTION EPWM_TZ_ACTION_HIGH_Z
 #define EPWM1_U_INTERRUPT_SOURCE EPWM_INT_TBCTR_DISABLED
+#define EPWM2_V_BASE EPWM2_BASE
+#define EPWM2_V_TBPRD 625
+#define EPWM2_V_COUNTER_MODE EPWM_COUNTER_MODE_UP_DOWN
+#define EPWM2_V_TBPHS 0
+#define EPWM2_V_CMPA 0
+#define EPWM2_V_CMPB 0
+#define EPWM2_V_CMPC 0
+#define EPWM2_V_CMPD 0
+#define EPWM2_V_DBRED 0
+#define EPWM2_V_DBFED 0
+#define EPWM2_V_TZA_ACTION EPWM_TZ_ACTION_HIGH_Z
+#define EPWM2_V_TZB_ACTION EPWM_TZ_ACTION_HIGH_Z
+#define EPWM2_V_INTERRUPT_SOURCE EPWM_INT_TBCTR_DISABLED
+#define EPWM3_W_BASE EPWM3_BASE
+#define EPWM3_W_TBPRD 0
+#define EPWM3_W_COUNTER_MODE EPWM_COUNTER_MODE_UP_DOWN
+#define EPWM3_W_TBPHS 0
+#define EPWM3_W_CMPA 0
+#define EPWM3_W_CMPB 0
+#define EPWM3_W_CMPC 0
+#define EPWM3_W_CMPD 0
+#define EPWM3_W_DBRED 0
+#define EPWM3_W_DBFED 0
+#define EPWM3_W_TZA_ACTION EPWM_TZ_ACTION_HIGH_Z
+#define EPWM3_W_TZB_ACTION EPWM_TZ_ACTION_HIGH_Z
+#define EPWM3_W_INTERRUPT_SOURCE EPWM_INT_TBCTR_DISABLED
 
 //*****************************************************************************
 //

@@ -53,7 +53,26 @@
 #include "device.h"
 #include "board.h"
 #include "c2000ware_libraries.h"
+static inline void EPWM1_setDuty(float duty)
+{
+    if(duty < 0.001f) duty = 0.001f;     // 0%/100% 극단값은 글리치 방지용으로 살짝 클램프
+    if(duty > 0.999f) duty = 0.999f;
 
+    uint16_t tbprd = EPWM_getTimeBasePeriod(EPWM1_U_BASE);
+    uint16_t cmpa  = (uint16_t)((float)tbprd * duty);
+
+    EPWM_setCounterCompareValue(EPWM1_U_BASE, EPWM_COUNTER_COMPARE_A, cmpa);
+}
+static inline void EPWM2_setDuty(float duty)
+{
+    if(duty < 0.001f) duty = 0.001f;     // 0%/100% 극단값은 글리치 방지용으로 살짝 클램프
+    if(duty > 0.999f) duty = 0.999f;
+
+    uint16_t tbprd = EPWM_getTimeBasePeriod(EPWM2_V_BASE);
+    uint16_t cmpa  = (uint16_t)((float)tbprd * duty);
+
+    EPWM_setCounterCompareValue(EPWM2_V_BASE, EPWM_COUNTER_COMPARE_A, cmpa);
+}
 //
 // Main
 //
@@ -105,12 +124,16 @@ void main(void)
     {
         GPIO_togglePin(DEVICE_GPIO_PIN_LED4);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED1);
+        EPWM1_setDuty(0.5);
+        EPWM2_setDuty(0.99);
         DEVICE_DELAY_US(500000);   // 500 ms
         GPIO_togglePin(DEVICE_GPIO_PIN_LED1);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED2);
         DEVICE_DELAY_US(500000);   // 500 ms
         GPIO_togglePin(DEVICE_GPIO_PIN_LED2);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED3);
+        EPWM1_setDuty(0.9);
+        EPWM2_setDuty(0.2);
         DEVICE_DELAY_US(500000);   // 500 ms
         GPIO_togglePin(DEVICE_GPIO_PIN_LED3);
         GPIO_togglePin(DEVICE_GPIO_PIN_LED4);
